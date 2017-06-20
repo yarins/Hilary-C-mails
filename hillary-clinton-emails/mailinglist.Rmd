@@ -1,0 +1,177 @@
+---
+title: "mailing lists"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Libraries Used
+
+```{r }
+library(dplyr)
+library(data.table)
+library(ggplot2)
+```
+
+## Hilary Clinton mailing lists
+For this project we aim to predict a gender based mail text formation using deep learning methods in python.
+As for the initial preparation of the data we'll be using R. 
+
+This dataset is devided into three tables we will combine into one full dataset:
+
+[1] Aliases (232 values) - Consists of a row index, mail alias, personId and gender
+[2] EmailReceivers (9306 values) - Consists of a row index, mailId and personId
+[3] Emails (7945 values) - Consists of 22 features, although we are only interested in just the senderId, mailId, mail subject                            and mail text.
+
+
+## Read csv's into data.frames
+```{r}
+aliases <- read.csv("Aliases.csv")
+emailReceivers <- read.csv("EmailReceivers.csv")
+emails <- read.csv("Emails.csv")
+```
+
+## Display alias table
+```{r}
+head(aliases,50)
+```
+
+## Display emailReceivers table
+```{r}
+head(emailReceivers,50)
+```
+
+
+## select only relevant features from email table
+```{r}
+emails <- emails %>%
+  select(Id,SenderPersonId,ExtractedSubject,ExtractedBodyText)
+```
+
+## Display emails table
+```{r}
+head(emails,50)
+```
+
+## Convert data.frames into data.tables
+```{r}
+aliases <- data.table(aliases)
+emailReceivers <- data.table(emailReceivers)
+emails <- data.table(emails)
+```
+
+
+
+
+## Join aliases and emailReceivers
+```{r}
+setkey(aliases,PersonId)
+setkey(emailReceivers,PersonId)
+Result <- merge(emailReceivers,aliases, all.x=TRUE, allow.cartesian=TRUE)
+Result <- Result %>%
+  select(EmailId,Alias,Gender)
+colnames(Result) <- c("emailId","receiver","receiverGender")
+head(Result,50)
+```
+
+
+## Join aliases and emailReceivers
+```{r}
+setkey(emails,SenderPersonId)
+Result2 <- merge(emails,aliases,by.x = "SenderPersonId", by.y = "PersonId", all.x=TRUE, allow.cartesian=TRUE)
+Result2 <- Result2 %>%
+  select(Id.x,Alias,Gender,ExtractedSubject,ExtractedBodyText)
+colnames(Result2) <- c("emailId","sender","senderGender","ExtractedSubject","ExtractedBodyText")
+head(Result2,50)
+```
+
+
+## Inspect Result and remove NA values after join
+```{r}
+summary(Result)
+Result <- na.omit(Result[, lapply(.SD, function(x) replace(x, which(x==0), NA))])
+summary(Result)
+```
+
+
+## Inspect Result2 and remove NA values after join
+```{r}
+summary(Result2)
+Result2 <- na.omit(Result2[, lapply(.SD, function(x) replace(x, which(x==0), NA))])
+summary(Result2)
+```
+
+## Join both tables into a full dataset of 8709 observations
+```{r}
+setkey(Result2,emailId)
+setkey(Result,emailId)
+mailingLists <- merge(Result2,Result, all.x=TRUE, allow.cartesian=TRUE)
+```
+
+## Inspect mailingLists and remove NA values after join
+```{r}
+summary(mailingLists)
+mailingLists <- na.omit(mailingLists[, lapply(.SD, function(x) replace(x, which(x==0), NA))])
+summary(mailingLists)
+```
+
+## remove duplicate values
+```{r}
+setkey(mailingLists)
+m <- unique(mailingLists)
+```
+
+## In order to estimate mail text length we'll convert mail text into a string
+```{r}
+mailingLists$ExtractedBodyText <- as.character(mailingLists$ExtractedBodyText)
+```
+
+## mail length feature
+```{r}
+mailingLists[,mailLength := nchar(ExtractedBodyText)]
+str(mailingLists)
+```
+
+## Instead of counting words in a text we'll count spaces which is a very close estimate for word count,
+Build a function
+```{r}
+countSpaces <- function(s) { sapply(gregexpr(" ", s), function(p) {sum(p>=0)})}
+```
+
+## spaces feature
+```{r}
+mailingLists <- transform(mailingLists, spaces = countSpaces(mailingLists$ExtractedBodyText))
+```
+
+## Look into the dataset
+It seems that we have way to much conversations (8580), let's clean the majority of observations
+```{r}
+summary(mailingLists)
+```
+
+## spaces count graph
+By looking at this graph and also on the summary and the data itself, most mails are short but there are texts which are extremely long or extremely short
+```{r}
+ggplot(mailingLists, aes(x = spaces)) +
+  geom_histogram(stat = "bin", binwidth=100)
+```
+
+## convert to data.frame
+```{r}
+mailingLists <- data.frame(mailingLists)
+```
+
+## Shrinking the dataset
+since at the 75th percentile mail texts consist of 27 words we decided to limit texts with above 21 words, and in order to have a bottom limit we chose texts with upto 200 words. 
+Now we have 2266 observations, of which 1683 are females and 561 are male senders
+```{r}
+mailingLists <- mailingLists %>%
+  filter(spaces < 200 & spaces > 20)
+```
+
+
+## The next tasks will be performed in Python
+
+

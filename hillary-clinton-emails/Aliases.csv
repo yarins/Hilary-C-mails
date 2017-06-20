@@ -1,0 +1,233 @@
+Id,Alias,PersonId,Gender
+8,mayock andrew,8,m
+9,shapiro andrew j,9,m
+15,lake anthony,11,m
+16,valenzuela arturo a,12,m
+18,kimoon ban,13,m
+19,obama barack,14,m
+22,mikulski bam,15,m
+30,clinton william j,17,m
+34,brian,20,m
+36,strider burns,21,m
+44,pascual carlos,23,m
+70,crocker chester a,33,m
+71,butzgy christopher h,34,m
+72,edwards christopher,35,m
+74,hill christopher r (baghdad),37,m
+77,colin powell,39,m
+85,daniel,45,m
+86,baer daniel,46,m
+91,inonye daniel,47,m
+92,schwerin daniel b,48,m
+95,axelrod david m,50,m
+97,brock david,51,m
+99,garten david (lautenberg),52,m
+100,inl:johnson david t,53,m
+103,chollet derek h,56,m
+106,donald,58,m
+107,band doug,59,m
+108,hattaway doug,60,m
+115,woodard eric w,65,m
+120,prm/mce:wills g,69,m
+121,lou de bac g/tip,70,m
+122,prm/mce:willsg,71,m
+123,mitchell george,72,m
+128,duksoo han,76,m
+129,koh harold hongju,77,m
+167,lew jacob,86,m
+172,sullivan jacbo j,87,m
+186,mcgovern james p,88,m
+187,smith james e,89,m
+188,steinberg james b,90,m
+193,farrow jeffrey,93,m
+196,feltman jeffrey d,94,m
+199,hoagland jim,96,m
+200,kennedy jim,97,m
+202,olver john,99,m
+203,podesta john,100,m
+205,carson johnnie,101,m
+207,jonathan prince,102,m
+208,daniel joshua j,103,m
+213,cooper justin,106,m
+216,eikenberry karl w,109,m
+218,conrad kent,111,m
+220,balderston kris m,112,m
+223,campbell kurt m,113,m
+226,lgraham,115,m
+238,brown lee r,118,m
+239,feinstein lee,119,m
+263,g/tip:cdebaca luis,128,m
+268,williamsbarrett,133,m
+273,mark,137,m
+274,markjpenn,138,m
+278,baucus max,141,m
+285,fuchs michael h,144,m
+287,posner michael h,145,m
+291,rodriguez miguel e,148,m
+292,mike,149,m
+302,norman nicholas,155,m
+307,sanchez oscar arias,159,m
+308,flores oscar,160,m
+309,lores oscar,161,m
+311,kennedy patrick f,163,m
+313,collier paul,164,m
+314,jones paul w,165,m
+316,robinson peter,167,m
+317,crowley philip,168,m
+319,gordon philip h,169,m
+323,reines philipe i,170,m
+331,crowley phillip j,171,m
+334,prime minister,173,m
+335,shah rajiv,174,m
+338,philippe reines,176,m
+346,blake robert o,182,m
+347,danford robert a,183,m
+348,hormats robert d,184,m
+350,russo robert  v,185,m
+356,zaidi s akbar,188,m
+359,berger samuel r,191,m
+362,berger samuel,192,m
+369,sir,195,m
+377,donilon thomas e,200,m
+378,nides thomas r,201,m
+384,stern todd,204,m
+406,ilic werner x,214,m
+408,burns william j,216,m
+413,hubbard william,217,m
+414,iscol zachary,218,m
+422,rooneym@state.gov,226,m
+428,reines philippe f,230,m
+438,oscar flores,233,m
+472,reines philippe t,249,m
+491,jacob j sullivan,257,m
+503,jake.sullivar,264,m
+505,jake.sulliyan,266,m
+508,jake.sulliva,269,m
+605,jacobjlew vermarr@state.gov,363,m
+611,williamsbarrett millscd@state.gov.,369,m
+616,baer.danie,374,m
+633,todd stern,382,m
+653,lew jacob i,389,m
+654,steinberg james,390,m
+661,justin cooper,395,m
+737,adams david s,430,m
+741,kritenbrink daniel j,432,m
+757,lgraham doug band,445,m
+773,johnson clifton m,456,m
+783,michael m. conway,465,m
+796,ian1evqr@state.gov,473,m
+803,jacobjle iewjj@state.gov b6,477,m
+807,jake.sullivan h,480,m
+834,jon davidson,502,m
+12,slaughter anne marie,10,f
+27,ebeling betsy,16,f
+33,klehr bonnie,19,f
+38,marshall capricia,22,f
+45,adler caroline e,24,f
+47,richards cecile,26,f
+50,chelsea,29,f
+52,cherie blair,30,f
+55,cheryl,31,f
+57,cheryl mills,32,f
+76,coleman claire l,38,f
+79,beale courtney a karamer,41,f
+82,kelly craig a,42,f
+84,hyde dana,44,f
+94,brian danielle,49,f
+105,reynolds diane,57,f
+111,politico  drew elizabeth,62,f
+112,tauscher ellen o,63,f
+114,faleomavaega eni f,64,f
+116,brimmer esther d,66,f
+124,glantz gina,73,f
+132,hill,79,f
+133,hillary clinton,80,f
+151,abedin huma,81,f
+161,kelly ian,82,f
+163,jama,84,f
+164,newmyer jackie,85,f
+192,jacobs janice l,92,f
+198,robinson jennifer,95,f
+201,laszczych joanne,98,f
+209,kieffer judith,104,f
+210,mchale judith,105,f
+217,kellyc@state.gov,110,f
+228,jiloty cheryl d,116,f
+237,rubiner laurie,117,f
+240,dewan linda l,120,f
+244,lissa muscatine,122,f
+253,quam lois,123,f
+255,valmoro lona,124,f
+261,diamond louise,126,f
+262,cue lourdes c,127,f
+265,lynn,130,f
+266,albright m k,131,f
+267,albright madeleine,132,f
+269,calivis maria,134,f
+270,otero maria,135,f
+272,af/pdpa:scott marianne,136,f
+277,pally maura m,140,f
+279,rooney megan,142,f
+281,vereer melanne s,143,f
+289,bond michele t,146,f
+290,michele.flournoy,147,f
+293,hanley monica r,150,f
+296,nancy,152,f
+297,neera tanden,153,f
+303,toiv nora f,156,f
+305,tov nora f,157,f
+333,campbell piper,172,f
+339,preval rene,177,f
+342,verma richard,180,f
+354,howe rosemarie,187,f
+364,blumenthal sidney,194,f
+370,talbott strobe,196,f
+373,rice susan e,197,f
+375,grantham suzanne l,198,f
+376,terry.duffy,199,f
+380,shannon thomas a,202,f
+388,tillemann tomicah,205,f
+391,elbegdori tsakina,206,f
+398,nuland victoria j,209,f
+399,ebeling voda,210,f
+403,sherman wendy,213,f
+427,nuiand victoria j,229,f
+429,sullivan jacob j nuland victoria 1,231,f
+506,michele.fl,267,f
+507,cheryimills millscd@state.gov,268,f
+514,cheryl.mills jake.sullivan,275,f
+524,cheryl.mills abedinh@state.gov,285,f
+525,cheryl.mill,286,f
+540,cheryl.millf.,301,f
+542,cheryl.millsi,303,f
+553,. huma abedin,314,f
+559,cheryl.mill sullivanjj@state.gov,320,f
+560,cheryl.mills millscd@state.gov.,321,f
+570,cheryl.mills sullivanjj@state.gov,331,f
+572,cheryl.mills _,333,f
+588,nancy millscd@state.gov b6,347,f
+592,huma abed in,350,f
+596,cheryl.mills sullivanjj@state.gov b6,354,f
+597,cheryl.mills( sullivanjj@state.gov,355,f
+598,huma abedin b6,356,f
+600,glantz.gina,358,f
+602,cheryl.mills huma abedin,360,f
+603,cheryl.mills millscd@state.gov,361,f
+623,otero mildred (clinton),377,f
+627,preines huma abedin,379,f
+641,cheryl.mill abedin huma,388,f
+655,rosemarie.howe h,391,f
+659,cheryl.miils@ millscd@state.gov,393,f
+668,cheryl.mills@ millscd@state.gov.,398,f
+673,maggie williams,401,f
+674,rosemarie howe,402,f
+728,hannah richert,426,f
+738,doug hattaway,431,f
+746,stanton katie,435,f
+768,bonnie klehr,451,f
+779,lona valmoro,461,f
+787,harris jennifer m,468,f
+794,laurenjiloty jilotylc@state.gov,471,f
+795,laurenjiloty,472,f
+804,declan kelly,478,f
+848,monica.hanle,511,f
